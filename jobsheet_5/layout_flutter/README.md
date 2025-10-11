@@ -36,7 +36,9 @@ Langkah 1: Menyiapkan aset gambar
 membuat folder images di root project layout_flutter. Memasukkan file gambar tersebut ke folder images, lalu set nama file tersebut ke file pubspec.yaml
 [!Langkah 1: Menyiapkan aset gambar](images/prak4-langkah1.png)
 
-
+Langkah 2: Tambahkan gambar ke body
+menambahkan aset gambar ke dalam body
+[!Langkah 2: Tambahkan gambar ke body](images/prak4-langkah2.png)
 
 
 
