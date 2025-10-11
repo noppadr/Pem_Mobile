@@ -31,6 +31,13 @@ memasukkan teks ke dalam Container dan menambahkan padding di sepanjang setiap t
 Langkah 2: Tambah variabel text section ke body
 [!Langkah 2: Tambah variabel text section ke body](images/prak3-langkah2.png)
 
+-- PRAKTIKUM 4: IMPLEMENTASI IMAGE SECTION --
+Langkah 1: Menyiapkan aset gambar
+membuat folder images di root project layout_flutter. Memasukkan file gambar tersebut ke folder images, lalu set nama file tersebut ke file pubspec.yaml
+[!Langkah 1: Menyiapkan aset gambar](images/prak4-langkah1.png)
+
+
+
 
 
 
