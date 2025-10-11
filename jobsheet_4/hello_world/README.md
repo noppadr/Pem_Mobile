@@ -51,6 +51,11 @@ Langkah 5: Input dan Selection Widget
 - flutter menyediakan widget yang dapat menerima input dari pengguna aplikasi.
 ![Langkah 5: Input dan Selection Widget](image/prak5-langkah5.png)
 
+Langkah 6: Date and Time Pickers
+- Date and Time Pickers termasuk pada kategori input dan selection widget
+![Langkah 6: Date and Time Pickers](image/prak5-langkah6.png)
+
+
 
 
 
