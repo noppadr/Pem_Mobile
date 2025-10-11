@@ -51,13 +51,29 @@ class MyApp extends StatelessWidget {
       ],
     );
 
+    // Prak 3 - Langkah 1: buat widget textSection
+    Widget textSection = Container(
+      padding: const EdgeInsets.all(32),
+      child: const Text(
+        'Gunung Bromo merupakan salah satu destinasi gunung favorit di Jawa Timur '
+        'bagi para pencinta alam dan wisata petualangan. Dengan ketinggian sekitar 2.329 meter di atas permukaan laut, '
+        'gunung ini menawarkan panorama kawah aktif yang menakjubkan serta pemandangan lautan pasir dan pegunungan sekitarnya. '
+        'Akses menuju kawasan Bromo relatif mudah, dan wisatawan dapat menikmati keindahan matahari terbit dari Penanjakan '
+        'dengan perjalanan singkat menggunakan jeep atau berjalan kaki. '
+        'Wisata ini sangat cocok bagi mereka yang ingin merasakan keindahan alam vulkanik tanpa pendakian berat. '
+        '\n\nDibuat oleh: Nova Diana Ramadhan (2341760104)',
+        softWrap: true,
+      ),
+    );
+
     return MaterialApp(
       title: 'Flutter layout: Nova Diana Ramadhan (2341760104)',
       home: Scaffold(
         appBar: AppBar(title: const Text('Flutter layout demo')),
         // Ganti body menjadi titleSection
-        // Prak 2 - Langkah 3: Ganti body menjadi buttonSection
-        body: Column(children: [titleSection, buttonSection]),
+        // Prak 2 - Langkah 3: tambah body dengan buttonSection
+        // Prak 3 - Langkah 2: tambah body dengan textSection
+        body: Column(children: [titleSection, buttonSection, textSection]),
       ),
     );
   }

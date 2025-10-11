@@ -23,7 +23,11 @@ Langkah 3: Tambah button section ke body
 [!Langkah 3: Tambah button section ke body](images/prak2-langkah3.png)
 
 
+-- PRAKTIKUM 3: IMPLEMENTASI TEXT SECTION --
+Langkah 1: Buat widget textSection
 
+Langkah 2: Tambah variabel text section ke body
+[!Langkah 2: Tambah variabel text section ke body](images/prak3-langkah2.png)
 
 
 
