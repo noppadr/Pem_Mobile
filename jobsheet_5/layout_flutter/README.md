@@ -1,3 +1,4 @@
+-- PRAKTIKUM 1: MEMBANGUN LAYOUT DI FLUTTER --
 Langkah 1: Buat Project Baru
 membuat sebuah project flutter baru dengan nama layout_flutter
 [!Langkah 1: Buat Project Baru](images/langkah01.png)
@@ -10,6 +11,10 @@ Langkah 3: Identifikasi layout diagram
 Langkah 4: Implementasi title row
 membuat kolom bagian kiri pada judul
 [!Langkah 4: Implementasi title row](images/langkah04.png)
+
+-- PRAKTIKUM 2: IMPLEMENTASI BUTTON ROW --
+Langkah 1: Buat method Column _buildButtonColumn
+[!Langkah 1: Buat method Column _buildButtonColumn](images/prak2-langkah1.png)
 
 
 
