@@ -47,6 +47,9 @@ Langkah 4: Dialog Widget
 - dialog widget pada flutter memiliki dua jenis dialog yaitu AlertDialog dan SimpleDialog.
 ![Langkah 4: Dialog Widget](image/prak5-langkah4.png)
 
+Langkah 5: Input dan Selection Widget
+- flutter menyediakan widget yang dapat menerima input dari pengguna aplikasi.
+![Langkah 5: Input dan Selection Widget](image/prak5-langkah5.png)
 
 
 
