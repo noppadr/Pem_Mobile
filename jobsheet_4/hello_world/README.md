@@ -37,11 +37,15 @@ Langkah 1: Cupertino Button dan Loading Bar
 
 Langkah 2: Floating Action Button (FAB)
 - membuat file di basic_widgets dengan nama fab_widget.dart
-![Langkah 1: Cupertino Button dan Loading Bar](image/prak5-langkah2.png)
+![Langkah 2: Floating Action Button (FAB)](image/prak5-langkah2.png)
 
 Langkah 3: Scaffold Widget
 - mengubah isi code main.dart. Scaffold widget digunakan untuk mengatur tata letak sesuai dengan material design.
-![Langkah 1: Cupertino Button dan Loading Bar](image/prak5-langkah3.png)
+![Langkah 3: Scaffold Widget](image/prak5-langkah3.png)
+
+Langkah 4: Dialog Widget
+- dialog widget pada flutter memiliki dua jenis dialog yaitu AlertDialog dan SimpleDialog.
+![Langkah 4: Dialog Widget](image/prak5-langkah4.png)
 
 
 
