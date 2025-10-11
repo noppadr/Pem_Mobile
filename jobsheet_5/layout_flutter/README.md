@@ -40,6 +40,13 @@ Langkah 2: Tambahkan gambar ke body
 menambahkan aset gambar ke dalam body
 [!Langkah 2: Tambahkan gambar ke body](images/prak4-langkah2.png)
 
+Langkah 3: Ubah menjadi ListView
+semua elemen diatur dalam ListView, bukan Column, karena ListView mendukung scroll yang dinamis saat aplikasi dijalankan pada perangkat yang resolusinya lebih kecil.
+[!Langkah 3: Ubah menjadi ListView](images/prak4-langkah3.png)
+
+
+
+
 
 
 

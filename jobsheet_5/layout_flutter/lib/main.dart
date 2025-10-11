@@ -73,7 +73,7 @@ class MyApp extends StatelessWidget {
         // Ganti body menjadi titleSection
         // Prak 2 - Langkah 3: tambah body dengan buttonSection
         // Prak 3 - Langkah 2: tambah body dengan textSection
-        body: Column(
+        body: ListView( //  Prak 4 - Langkah 3: ubah menjadi ListView
           children: [
             // Prak 4 - Langkah 2: menambahkan aset gambar ke dalam body
             Image.asset(
