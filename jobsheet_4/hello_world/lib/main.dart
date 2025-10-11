@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'basic_widget/text_widget.dart';
+import 'basic_widget/image_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -98,13 +100,10 @@ class _MyHomePageState extends State<MyHomePage> {
           // center the children vertically; the main axis here is the vertical
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
-          //
-          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
-          // action in the IDE, or press "p" in the console), to see the
-          // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text('You have pushed the button this many times:'),
+            const MyTextWidget(),
+            const MyImageWidget(),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
@@ -120,3 +119,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
