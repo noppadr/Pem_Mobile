@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'basic_widget/text_widget.dart';
 import 'basic_widget/image_widget.dart';
+import 'basic_widget/loading_cupertino.dart';
+import 'basic_widget/fab_widget.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  //tidak berubah
   const MyApp({super.key});
 
   // This widget is the root of your application.
@@ -32,12 +35,13 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const FabWidget(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
+  //berubah
   const MyHomePage({super.key, required this.title});
 
   // This widget is the home page of your application. It is stateful, meaning
@@ -100,10 +104,15 @@ class _MyHomePageState extends State<MyHomePage> {
           // center the children vertically; the main axis here is the vertical
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
+          //
+          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
+          // action in the IDE, or press "p" in the console), to see the
+          // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const MyTextWidget(),
             const MyImageWidget(),
+            const SizedBox(height: 20),
+            // const Text('You have pushed the button this many times:'),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
@@ -119,4 +128,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-

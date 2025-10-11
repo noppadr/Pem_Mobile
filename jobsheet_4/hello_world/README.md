@@ -30,3 +30,20 @@ Langkah 2: Image Widget
 - menyesuaikan kode dan import di file main.dart
 ![Langkah 2: Image Widget](image/langkah02.2.png)   
 
+Praktikum 5: Menerapkan Widget Material Design dan iOS Cupertino
+Langkah 1: Cupertino Button dan Loading Bar
+- membuat file di basic_widgets dengan nama loading_cupertino.dart.
+![Langkah 1: Cupertino Button dan Loading Bar](image/prak5-langkah1.png)
+
+Langkah 2: Floating Action Button (FAB)
+- membuat file di basic_widgets dengan nama fab_widget.dart
+![Langkah 1: Cupertino Button dan Loading Bar](image/prak5-langkah2.png)
+
+Langkah 3: Scaffold Widget
+- mengubah isi code main.dart. Scaffold widget digunakan untuk mengatur tata letak sesuai dengan material design.
+![Langkah 1: Cupertino Button dan Loading Bar](image/prak5-langkah3.png)
+
+
+
+
+
