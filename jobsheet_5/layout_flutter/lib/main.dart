@@ -52,11 +52,12 @@ class MyApp extends StatelessWidget {
     );
 
     return MaterialApp(
-      title: 'Flutter layout: Vita Eka Saraswati 2341760082',
+      title: 'Flutter layout: Nova Diana Ramadhan (2341760104)',
       home: Scaffold(
         appBar: AppBar(title: const Text('Flutter layout demo')),
         // Ganti body menjadi titleSection
-        body: Column(children: [titleSection]),
+        // Prak 2 - Langkah 3: Ganti body menjadi buttonSection
+        body: Column(children: [titleSection, buttonSection]),
       ),
     );
   }

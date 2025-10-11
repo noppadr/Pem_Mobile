@@ -16,6 +16,15 @@ membuat kolom bagian kiri pada judul
 Langkah 1: Buat method Column _buildButtonColumn
 [!Langkah 1: Buat method Column _buildButtonColumn](images/prak2-langkah1.png)
 
+Langkah 2: Buat widget buttonSection
+[!Langkah 2: Buat widget buttonSection](images/prak2-langkah2.png)
+
+Langkah 3: Tambah button section ke body
+[!Langkah 3: Tambah button section ke body](images/prak2-langkah3.png)
+
+
+
+
 
 
 
