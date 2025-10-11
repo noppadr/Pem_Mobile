@@ -25,6 +25,8 @@ Langkah 3: Tambah button section ke body
 
 -- PRAKTIKUM 3: IMPLEMENTASI TEXT SECTION --
 Langkah 1: Buat widget textSection
+memasukkan teks ke dalam Container dan menambahkan padding di sepanjang setiap tepinya
+[!Langkah 1: Buat widget textSection](images/prak2-langkah1.png)
 
 Langkah 2: Tambah variabel text section ke body
 [!Langkah 2: Tambah variabel text section ke body](images/prak3-langkah2.png)
