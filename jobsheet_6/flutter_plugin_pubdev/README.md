@@ -33,3 +33,8 @@ Mengatasi error dengan mengubah kode menjadi seperti berikut:
 **Langkah 5: Buat Variabel text dan parameter di constructor**
 ![Screenshot](images/langkah05.png)
 
+**Langkah 6: Menambahkan widget di main.dart**
+![Screenshot](images/Langkah06.png)
+
+Run aplikasi tersebut dan hasilnya akan seperti berikut
+![Screenshot](images/Langkah6.1.png)
