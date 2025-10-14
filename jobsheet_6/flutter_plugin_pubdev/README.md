@@ -30,7 +30,6 @@ Terjadi error karena:
 Mengatasi error dengan mengubah kode menjadi seperti berikut:
 ![Screenshot](images/langkah4.1.png)
 
+**Langkah 5: Buat Variabel text dan parameter di constructor**
+![Screenshot](images/langkah05.png)
 
-
-
----
