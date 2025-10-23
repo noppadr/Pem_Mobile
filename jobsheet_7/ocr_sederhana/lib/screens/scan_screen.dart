@@ -16,7 +16,7 @@ class ScanScreen extends StatefulWidget {
 class _ScanScreenState extends State<ScanScreen> {
   // Ubah _controller menjadi nullable (bisa null)
   CameraController? _controller;
-  // Ini adalah Future yang akan kita tunggu
+
   late Future<void> _initializeControllerFuture;
 
   @override
@@ -26,7 +26,6 @@ class _ScanScreenState extends State<ScanScreen> {
     _initializeControllerFuture = _initCamera();
   }
 
-  // _initCamera sekarang mengembalikan Future<void>
   Future<void> _initCamera() async {
     try {
       cameras = await availableCameras();
@@ -35,9 +34,9 @@ class _ScanScreenState extends State<ScanScreen> {
       }
       
       _controller = CameraController(
-        cameras[0], // Gunakan kamera utama
+        cameras[0], 
         ResolutionPreset.medium,
-        enableAudio: false, // Matikan audio jika tidak perlu
+        enableAudio: false, 
       );
       
       // Initialize controller dan tunggu sampai selesai
@@ -46,7 +45,7 @@ class _ScanScreenState extends State<ScanScreen> {
     } catch (e) {
       // Jika error, Future-nya akan melempar error
       debugPrint('Error initializing camera: $e');
-      rethrow; // Lempar ulang error agar FutureBuilder bisa menangkapnya
+      rethrow; 
     }
   }
 
@@ -66,10 +65,6 @@ class _ScanScreenState extends State<ScanScreen> {
   }
 
   Future<void> _takePicture() async {
-    // Kita tidak perlu 'await _initializeControllerFuture' di sini
-    // karena FutureBuilder sudah menjamin _controller-nya siap.
-
-    // Cukup pastikan _controller tidak null
     if (_controller == null) return;
 
     try {
@@ -108,29 +103,24 @@ class _ScanScreenState extends State<ScanScreen> {
       future: _initializeControllerFuture,
       builder: (context, snapshot) {
         
-        // --- 1. Saat Masih Loading ---
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const Scaffold(
             body: Center(child: CircularProgressIndicator()),
           );
         }
 
-        // --- 2. Jika Gagal Inisialisasi ---
         if (snapshot.hasError) {
           return Scaffold(
             appBar: AppBar(title: const Text('Error Kamera')),
             body: Center(
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
-                // Tampilkan pesan error ke user!
                 child: Text('Gagal menginisialisasi kamera: ${snapshot.error}. Coba restart aplikasi atau HP Anda.'),
               ),
             ),
           );
         }
 
-        // --- 3. Jika Sukses ---
-        // Baru tampilkan kamera jika sudah 100% siap
         return Scaffold(
           appBar: AppBar(title: const Text('Kamera OCR')),
           body: Column(
