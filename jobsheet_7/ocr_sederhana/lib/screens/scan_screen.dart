@@ -32,20 +32,19 @@ class _ScanScreenState extends State<ScanScreen> {
       if (cameras.isEmpty) {
         throw Exception('No cameras found');
       }
-      
+
       _controller = CameraController(
-        cameras[0], 
+        cameras[0],
         ResolutionPreset.medium,
-        enableAudio: false, 
+        enableAudio: false,
       );
-      
+
       // Initialize controller dan tunggu sampai selesai
       await _controller!.initialize();
-
     } catch (e) {
       // Jika error, Future-nya akan melempar error
       debugPrint('Error initializing camera: $e');
-      rethrow; 
+      rethrow;
     }
   }
 
@@ -58,8 +57,9 @@ class _ScanScreenState extends State<ScanScreen> {
   Future<String> _ocrFromFile(File imageFile) async {
     final inputImage = InputImage.fromFile(imageFile);
     final textRecognizer = TextRecognizer(script: TextRecognitionScript.latin);
-    final RecognizedText recognizedText =
-        await textRecognizer.processImage(inputImage);
+    final RecognizedText recognizedText = await textRecognizer.processImage(
+      inputImage,
+    );
     textRecognizer.close();
     return recognizedText.text;
   }
@@ -82,15 +82,15 @@ class _ScanScreenState extends State<ScanScreen> {
       if (!mounted) return;
       Navigator.push(
         context,
-        MaterialPageRoute(
-          builder: (_) => ResultScreen(ocrText: ocrText),
-        ),
+        MaterialPageRoute(builder: (_) => ResultScreen(ocrText: ocrText)),
       );
     } catch (e) {
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text('Error saat mengambil / memproses foto: $e'),
+        const SnackBar(
+          content: Text(
+            'Pemindaian Gagal! Periksa Izin Kamera atau coba lagi.',
+          ),
         ),
       );
     }
@@ -102,10 +102,22 @@ class _ScanScreenState extends State<ScanScreen> {
     return FutureBuilder<void>(
       future: _initializeControllerFuture,
       builder: (context, snapshot) {
-        
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return const Scaffold(
-            body: Center(child: CircularProgressIndicator()),
+          return Scaffold(
+            backgroundColor: Colors.grey[900],
+            body: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CircularProgressIndicator(color: Colors.yellow),
+                  const SizedBox(height: 20),
+                  const Text(
+                    'Memuat Kamera... Harap tunggu.',
+                    style: TextStyle(color: Colors.white, fontSize: 18),
+                  ),
+                ],
+              ),
+            ),
           );
         }
 
@@ -115,7 +127,9 @@ class _ScanScreenState extends State<ScanScreen> {
             body: Center(
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
-                child: Text('Gagal menginisialisasi kamera: ${snapshot.error}. Coba restart aplikasi atau HP Anda.'),
+                child: Text(
+                  'Gagal menginisialisasi kamera: ${snapshot.error}. Coba restart aplikasi atau HP Anda.',
+                ),
               ),
             ),
           );
