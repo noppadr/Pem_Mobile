@@ -33,4 +33,12 @@ class _PlanScreenState extends State<PlanScreen> {
       },
     );
   }
+
+  Widget _buildList() {
+    return ListView.builder(
+      itemCount: plan.tasks.length,
+      itemBuilder: (context, index) =>
+      _buildTaskTile(plan.tasks[index], index),
+    );
+  }
 }
