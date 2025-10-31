@@ -1,16 +1,16 @@
 import '../models/data_layer.dart';
 import 'package:flutter/material.dart';
 
-class PlanScreen extends StatelessWidget {
+class PlanScreen extends StatefulWidget {
   const PlanScreen({super.key});
-
+  
   @override
-  State createState() => _PlanScreenState();
+  State<PlanScreen> createState() => _PlanScreenState();
 }
 
 class _PlanScreenState extends State<PlanScreen> {
   Plan plan = const Plan();
-
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +19,7 @@ class _PlanScreenState extends State<PlanScreen> {
       floatingActionButton: _buildAddTaskButton(),
     );
   }
-
+  
   Widget _buildAddTaskButton() {
     return FloatingActionButton(
       child: const Icon(Icons.add),
@@ -27,21 +27,21 @@ class _PlanScreenState extends State<PlanScreen> {
         setState(() {
           plan = Plan(
             name: plan.name,
-            tasks: List<Task>.from(plan.tasks). .add(const Task()),
+            tasks: List<Task>.from(plan.tasks)..add(const Task()),
           );
         });
       },
     );
   }
-
+  
   Widget _buildList() {
     return ListView.builder(
       itemCount: plan.tasks.length,
       itemBuilder: (context, index) =>
-      _buildTaskTile(plan.tasks[index], index),
+          _buildTaskTile(plan.tasks[index], index),
     );
   }
-
+  
   Widget _buildTaskTile(Task task, int index) {
     return ListTile(
       leading: Checkbox(
@@ -75,3 +75,4 @@ class _PlanScreenState extends State<PlanScreen> {
       ),
     );
   }
+}
