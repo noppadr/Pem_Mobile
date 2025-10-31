@@ -10,6 +10,7 @@ class PlanScreen extends StatefulWidget {
 
 class _PlanScreenState extends State<PlanScreen> {
   Plan plan = const Plan();
+  late ScrollController scrollController;
   
   @override
   Widget build(BuildContext context) {
