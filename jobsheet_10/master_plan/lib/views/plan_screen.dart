@@ -19,4 +19,18 @@ class _PlanScreenState extends State<PlanScreen> {
       floatingActionButton: _buildAddTaskButton(),
     );
   }
+
+  Widget _buildAddTaskButton() {
+    return FloatingActionButton(
+      child: const Icon(Icons.add),
+      onPressed: () {
+        setState(() {
+          plan = Plan(
+            name: plan.name,
+            tasks: List<Task>.from(plan.tasks). .add(const Task()),
+          );
+        });
+      },
+    );
+  }
 }
